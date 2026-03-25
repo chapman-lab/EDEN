@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #1a1a2e;
+  --color-eden-green: #2d6a4f;
+  --color-eden-green-light: #40916c;
+  --color-eden-green-dark: #1b4332;
+  --color-eden-gold: #d4a843;
+  --color-eden-gold-light: #e8c86a;
+  --color-eden-cream: #faf8f0;
+  --color-eden-warm: #f5f0e8;
+  --color-eden-slate: #3d405b;
+  --color-eden-slate-light: #6b6e8a;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+/* Stat counter animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animation-delay-200 { animation-delay: 0.2s; }
+.animation-delay-400 { animation-delay: 0.4s; }
+.animation-delay-600 { animation-delay: 0.6s; }
+
+/* Smooth section transitions */
+section {
+  scroll-margin-top: 80px;
+}
